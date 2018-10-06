@@ -1,0 +1,51 @@
+Style Editor and Game
+By: Vatsal Ojha
+Section 1: Overview
+The UI is very basic and simple to use. Begin by choosing whether to play the
+game or to edit the code which you selected in the beginning. The game is held
+with a premade file, not any code which the user enters. The game, once finished, 
+will close the window, requiring a restart to run the editor. Same for editor.
+The game is simply a text box and a seperate window for the timer and you must finish
+editing the code completely of style errors without changing the output. The style 
+that must be fixed is:
+1. Global Variables
+2. Magic Numbers
+3. Long Functions
+4. Long lines
+
+Meanwhile, the editor has 6 options, the first four of which work similarly:
+1. Magic Numbers
+2. Global Variables
+3. Long Lines
+4. Long Functions
+5. Adding Timers
+6. Comment Suggestor
+The first four simply make yes or no boxes with the line it is referring to and 
+asking whether you want to change the line.
+The timer adding is simply adding lines which time how long each function takes and prints
+how long it takes at the end of the function. 
+Now onto the crux of this project
+Section 2: Comment Suggestor
+The suggestions were created via an implementation of a simple Naive Bayes classifier. In
+particular, it uses the principle of "bag of words". This method is simply creating a list of
+all words in the training and testing file, and creating a vector with each element in the vector
+corresponding to a specific word in the files. Then, the algorithm trains on these vectors by
+simply adding one to the element of the vector corresponding to a word it sees in a specific
+line. This is a supervised learning algorithm as each line is pre-labeled as commented or
+not commented. The entire machine learning algorithnm was implemeneted without the use of
+external packages, and based on some of the info on:
+https://en.wikipedia.org/wiki/Naive_Bayes_classifier
+In addition to the bag of words, another element in the vector was added recording the 
+length of the line modulo 5. The modulus is to group the line lengths into broader
+and reasonable groups to get the most out of the algorithm (the same reason we 
+might display continuous data with histograms). 
+Currently, the algorithm runs with 81% efficiency. More specifically, if a line is 
+commented/uncommented, there is an 81% probability that the algorithm will label
+it correctly. This is far better than a simple guess but obviously can be improved.
+The training code is relatively diverse, incorporating code from Google's
+Python Github and 112 homework code, and of course more data can be used for
+more generalization, but this amount of code helps with efficiency and speed
+of the code itself.
+
+If you would like to retest the code given in the folder, just copy and paste
+from the playingOriginal file and then rerun the program.

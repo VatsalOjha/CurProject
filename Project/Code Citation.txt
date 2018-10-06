@@ -1,0 +1,6 @@
+﻿https://stackoverflow.com/questions/25027122/break-the-function-after-certain-time
+https://pythonspot.com/tk-file-dialogs/
+https://stackoverflow.com/questions/2400262/how-to-create-a-timer-using-tkinter
+Run Function From 15-112
+A lot of my ideas (not actual code but ideas) are from this domain:
+http://effbot.org/tkinterbook/tkinter-widget-styling.htm

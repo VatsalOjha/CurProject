@@ -1,0 +1,34 @@
+﻿Style Editor
+An interface which suggests and executes style edits in a python program
+
+
+The main project I have seen online which is similar to this is a nearly identical project as the one I am doing, done a few years ago in 112. My code, however, will have a few key upgrades from that version. Firstly, I have implemented a machine learning based comment suggestor, which will suggest where to add comments in a file. Additionally, I am adding a game which is a fun way to test people on how fast they can edit a badly styled code, which will be judged by the program itself. The final improvement is a runtime analysis, which will determine which functions are taking the longest in the file.
+Structure
+1. One main file for all the “checking style” functions
+2. Another file for UI
+3. Third file for the game
+4. No objects needed (as of now)
+Algo Design
+The trickiest part moving forward will be the runtime analysis, which I will attempt to brute force in a sense by simply editing the code to add timers in for each function and then averaging the times for each function, and after done, deleting all the timers. There might be some issues in running a different file in python but I think it will be fine
+Timeline
+This week: Runtime analysis, basic UI (including framework for game)
+Next Week: Finish Game and touch up on minor bugs when editing files
+Version Control
+Updating the term project file every so often and editing the test file. Also keeping original copy of test file (unedited by code, currently they are the same).
+  
+
+Modules: Just scikitlearn
+
+
+TP2 Update
+1. Wrote my own machine learning algorithm (a Naive Bayes Classifier). Added a significant amount of complexity to code.
+   1. Planning on adding more data to the training vectors to improve accuracy
+   2. Currently has better accuracy than previous, scikitlearn based algorithm
+   3. Also planning on adding comment type suggestions
+1. A functioning UI for all current components (in canvas). Need to make aesthetic changes
+2. Game is functioning but doesn’t look “good” yet.
+TP3 Update
+1. Added a new element in the training vector (line length) for training
+   1. Still better accuracy
+1. Basic suggestions on what types of comments to add
+2. UI looks relatively nice
